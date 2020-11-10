@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>TP2 Part III</title>
+</head> 
+<body>
+    <h1>Bulletin de note</h1>
+    <form name="blt">
+        <div class="block">
+            <label for="note1">Première note</label><input type="text" name="note1" id="noteOne">
+            <label for="note2">Deuxième note</label><input type="text" name="note2" id="noteTwo">
+            <label for="note3">Troisième note</label><input type="text" name="note3" id="noteThree">
+            <label for="note4">Quatrième note</label><input type="text" name="note4" id="noteFour">
+            <label for="note5">Cinquième note</label><input type="text" name="note5" id="noteFive">
+        </div> 
+        <div class="flex">
+        <label for="average">Appuyer sur le bouton</label>
+        <button id="calcul">Moyenne</button>
+        <input type="text" name="average" id="average">
+        </div>
+        <div id="appreciation"></div>
+    </form>
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

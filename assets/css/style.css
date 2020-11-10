@@ -1,0 +1,17 @@
+h1{
+    text-align: center;
+}
+.block{
+    white-space: pre-line;
+    text-align: center;  
+}
+label, input, button{
+    margin: 5px;
+}
+.flex{
+    display: flex;
+    position: relative;
+    margin-top: 10%;
+    margin-left: 32%;
+
+}
