@@ -21,11 +21,36 @@ $(document).ready(function(){
             $('#appreciation').html('Très bien');
         }
         else if(result == 20){
-            $('#appreciation').html('Excellent')
+            $('#appreciation').html('Excellent');
+        }
+        else{
+            $('#appreciation').html('Les valeurs entrées sont incorrect');
         }
 
         event.preventDefault();
 
     });
 
+// animation des labels  
+    const inputs = document.querySelectorAll('input');
+
+        for(let i = 0; i < inputs.length; i++) {
+
+            let field = inputs[i];
+            
+            field.addEventListener('input', (e) =>{
+                if(e.target.value != ""){
+                    e.target.parentNode.classList.add('animation');
+                }
+                else if(e.target.value == ""){
+                    e.target.parentNode.classList.remove('animation');
+                }
+            })
+        }
+          
+        $('#clear').click(function(){
+            $('input').val('');
+        });
+
 });
+    

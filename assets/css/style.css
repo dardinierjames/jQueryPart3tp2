@@ -1,17 +1,148 @@
-h1{
-    text-align: center;
+*, ::before, ::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0%;
 }
-.block{
-    white-space: pre-line;
-    text-align: center;  
-}
-label, input, button{
-    margin: 5px;
-}
-.flex{
+/* retire tout les marges externes et internes des élèments qui en possèdent par défaulte et 'box-sizing: border-box; permet dans remettre par la suite de manière perso */
+body{
+    background-color: #333333;
+    width: 100%;
+    height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-image: url(../img/tablette.jpeg);
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    position: absolute;
+    top: 25%;
+    left: 36%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: rgba(0,0,0,0.8);
+    width: 30%;
+    height: 56vh;
+    padding: 25px;
+    border-radius: 8px;
+}
+.box h1{
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+    color: #5260ad;
+    margin-bottom: 20px;
+}
+.formBloc .group{
     position: relative;
-    margin-top: 10%;
-    margin-left: 32%;
+    display: flex;
+    margin-bottom: 5px;
+}
+.formBloc .group label{
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    color: #aaaaaa;
+    font-size: 15px;
+    transition: 0.5s ease-out;
+}
 
+/* animation des labels */
+
+.formBloc .group:focus-within label,
+.formBloc .group.animation label{
+    top: 0px;
+    transform: translateY(-15%);
+    color: #8b97d7;
+}
+.formBloc .group:focus-within input,
+.formBloc .group.animation input{
+    color: #8b97d7;
+}
+
+/* fin de la partie animation en css voir suite dans script.js */
+
+.formBloc .group input{
+    -moz-appearance: textfield;
+    display: block;
+    width: 100%;
+    text-align: end;
+    padding: 5px 0px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 3px solid #aaaaaa;
+    color: #666;
+    font-size: 15px;
+    transition: 0.5s ease-out;
+}
+.group:nth-child(7){
+    margin-bottom: 10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+#calcul{
+    display: block;
+    width: auto;
+    padding: 5px 15px;
+    color: #8b97d7;
+    border: 3px solid #8b97d7;
+    border-radius: 15px;
+    background-image: linear-gradient( to right, transparent 50%, #5260ad 50%, #8b97d7);
+    background-size: 200%;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.formBloc .group #calcul:hover{
+    color: #ffffff;
+    background-position: 100%;
+    border: 3px solid #ffffff;
+    transition: 0.5s ease-out;
+}
+.formBloc .group2 input{
+    display: block;
+    text-align: end;
+    width: 100%;
+    padding: 5px 0px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 3px solid #aaaaaa;
+    color: #5260ad;
+    font-size: 20px;
+}
+.group:nth-child(9){
+    font-size: 20px;
+    color: #5260ad;
+    justify-content: center;
+    margin-top: 35px;
+}
+#clear{
+    position: relative;
+    margin-top: 5%;
+    margin-left: 58.5%;
+    border: 3px solid  #8b97d7;
+    border-radius: 999px;
+    font-size: 28px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #5260ad;
+    padding-left: 8px;
+    padding-right: 8px;
+    cursor: pointer;
+    background-image: linear-gradient( to right, transparent 50%, #5260ad 50%, #8b97d7);
+    background-size: 200%;
+}
+#clear:hover{
+    color: #ffffff;
+    background-position: 100%;
+    border: 3px solid #ffffff;
+    transition: 0.3s ease-out;
 }
